@@ -1,85 +1,85 @@
 {
-    "context": {
-      "domain": "ONDC:RET10",
-      "location": {
-        "city": {
-          "code": "std:5735"
-        },
-        "country": {
-          "code": "IND"
+  "context": {
+    "domain": "ONDC:RET10",
+    "location": {
+      "city": {
+        "code": "std:011"
+      },
+      "country": {
+        "code": "IND"
+      }
+    },
+    "action": "search",
+    "version": "2.0.2",
+    "transaction_id": "7ada7e6f-5d92-40bd-9471-bcbf4eef546b",
+    "message_id": "b56d65cf-1d93-4af2-b7bf-007e52b96094",
+    "timestamp": "2024-07-23T07:20:09.317Z",
+    "bap_id": "ondcpreprodb2b.rapidor.co",
+    "bap_uri": "https://ondcpreprodb2b.rapidor.co/v1/ondc/buyer",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "intent": {
+      "item": {
+        "descriptor": {
+          "name": "cornitos"
         }
       },
-      "action": "search",
-      "version": "2.0.2",
-      "transaction_id": "a55998d8-ba36-46d7-8a5a-e30b2951d498",
-      "message_id": "14034a70-476d-4a28-bbd0-64f4f123abcb",
-      "timestamp": "2024-03-20T09:19:52.089Z",
-      "bap_id": "ondcpreprodb2b.rapidor.co",
-      "bap_uri": "https://ondcpreprodb2b.rapidor.co/v1/ondc/buyer",
-      "ttl": "PT30S"
-    },
-    "message": {
-      "intent": {
-        "item": {
-          "descriptor": {
-            "name": "cornitos"
+      "fulfillment": {
+        "type": "Delivery",
+        "stops": [
+          {
+            "type": "end",
+            "location": {
+              "gps": "28.613930,77.208828",
+              "area_code": "110067"
+            }
           }
-        },
-        "fulfillment": {
-          "type": "Delivery",
-          "stops": [
+        ]
+      },
+      "tags": [
+        {
+          "descriptor": {
+            "code": "bap_terms"
+          },
+          "list": [
             {
-              "type": "end",
-              "location": {
-                "gps": "28.481469,77.513547",
-                "area_code": "201308"
-              }
+              "descriptor": {
+                "code": "finder_fee_type"
+              },
+              "value": "percent"
+            },
+            {
+              "descriptor": {
+                "code": "finder_fee_amount"
+              },
+              "value": "0.0"
             }
           ]
         },
-        "tags": [
-          {
-            "descriptor": {
-              "code": "bap_terms"
-            },
-            "list": [
-              {
-                "descriptor": {
-                  "code": "finder_fee_type"
-                },
-                "value": "percent"
-              },
-              {
-                "descriptor": {
-                  "code": "finder_fee_amount"
-                },
-                "value": "0.0"
-              }
-            ]
+        {
+          "descriptor": {
+            "code": "buyer_id"
           },
-          {
-            "descriptor": {
-              "code": "buyer_id"
-            },
-            "list": [
-              {
-                "descriptor": {
-                  "code": "buyer_id_code"
-                },
-                "value": "gst"
+          "list": [
+            {
+              "descriptor": {
+                "code": "buyer_id_code"
               },
-              {
-                "descriptor": {
-                  "code": "buyer_id_no"
-                },
-                "value": "22AAAAA0000A1Z5"
-              }
-            ]
-          }
-        ],
-        "payment": {
-          "type": "ON-FULFILLMENT"
+              "value": "gst"
+            },
+            {
+              "descriptor": {
+                "code": "buyer_id_no"
+              },
+              "value": "23FZZAF2408R2Z4"
+            }
+          ]
         }
+      ],
+      "payment": {
+        "type": "ON-FULFILLMENT"
       }
     }
   }
+}
